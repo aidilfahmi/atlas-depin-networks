@@ -1,8 +1,8 @@
 # Atlas DePIN Blockchain Genesis Coordination
 
-This repository coordinates the genesis of the **Atlas DePIN** networks (`atlas-1`). It is where genesis validators submit their `gentx` files, and where the canonical peer/seed lists for the network are maintained.
+This repository coordinates the genesis of the **Atlas DePIN** networks. It is where genesis validators submit their `gentx` files, and where the canonical peer/seed lists for the network are maintained.
 
-If you want to participate in the testnet as a genesis validator, follow the steps below. Everything here is also captured in [`instructions.sh`](instructions.sh) if you prefer a scripted walkthrough.
+If you wish to participate in the testnet as a genesis validator, follow the steps below. Everything here is also captured in [`instructions.sh`](instructions.sh) if you prefer a scripted walkthrough.
 
 ## Repository layout
 
@@ -32,7 +32,7 @@ WALLETNAME="YOUR_WALLET_NAME"
 ### 1. Initialize the chain
 
 ```bash
-atlasd init $MONIKER --chain-id "atlas-1"
+atlasd init "$MONIKER" --chain-id "itineraria-1"
 ```
 
 ### 2. Create a keypair
@@ -51,7 +51,7 @@ atlasd genesis add-genesis-account $(atlasd keys show -a $WALLETNAME) 1000000000
 
 ```bash
 atlasd genesis gentx $WALLETNAME 500000000uatl \
-  --chain-id "atlas-1" \
+  --chain-id "itineraria-1" \
   --moniker "$MONIKER" \
   --commission-rate "0.05" \
   --commission-max-rate "0.20" \
@@ -86,7 +86,6 @@ The commission and metadata flags are defaults. Adjust them to match your valida
 
 ## Network parameters
 
-- Chain ID: `atlas-1`
-- Denom: `uatl`
-- Genesis account funding: `1000000000uatl`
-- GenTx stake: `500000000uatl`
+| Network | Chain ID | Denom | Status |
+| -------- | -------- | -------- | -------- |
+| Testnet | itineraria-1 | uatl | Pending GenTXs |

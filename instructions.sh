@@ -1,11 +1,11 @@
 # == Generate GenTx =======
 #
 # 1. Make your life easier by setting the following variables:
-MONIKER="YOUR_VALIDATOR_MONIKER"
+MONIKER="YOUR VALIDATOR MONIKER"
 WALLETNAME="YOUR_WALLET_NAME"
 
 # 2. Initialize the chain
-atlasd init $MONIKER --chain-id "atlas-1"
+atlasd init "$MONIKER" --chain-id "itineraria-1"
 
 # 3. Create a keypair
 atlasd keys add $WALLETNAME
@@ -16,7 +16,7 @@ atlasd genesis add-genesis-account $(atlasd keys show -a $WALLETNAME) 1000000000
 # 5. Generate the gentx file
 # You may want to change the default parameters seen here.
 atlasd genesis gentx $WALLETNAME 500000000uatl \
-  --chain-id "atlas-1" \
+  --chain-id "itineraria-1" \
   --moniker "$MONIKER" \
   --commission-rate "0.05" \
   --commission-max-rate "0.20" \
