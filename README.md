@@ -18,7 +18,7 @@ networks/
 
 ## Prerequisites
 
-- The `atlasd` binary, built from the [atlas-protocol](https://github.com/Atlas-DePIN) repository.
+- The `atlasd` binary, built or downloaded from the [atlas-protocol](https://github.com/Atlas-DePIN/atlas) repository.
 
 ## Become a genesis validator
 
